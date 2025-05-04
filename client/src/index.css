@@ -82,6 +82,22 @@
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
+/* Animation for mobile menu dropdown */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animation-slideDown {
+  animation: slideDown 0.2s ease-out forwards;
+}
+
 @layer base {
   * {
     @apply border-border;
