@@ -119,9 +119,14 @@ export default function Navbar() {
             </Link>
             
             {user ? (
-              <div className="flex items-center space-x-2">
-                <span className="text-sm text-gray-700">Hi, {user.username}</span>
-                <Button variant="ghost" size="sm" onClick={handleLogout}>
+              <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-2 bg-gray-100 px-3 py-1.5 rounded-full">
+                  <div className="h-7 w-7 bg-primary text-white rounded-full flex items-center justify-center font-medium">
+                    {user.username.charAt(0).toUpperCase()}
+                  </div>
+                  <span className="text-sm font-medium">Welcome, {user.username}!</span>
+                </div>
+                <Button variant="outline" size="sm" onClick={handleLogout} className="text-gray-700">
                   Logout
                 </Button>
               </div>
